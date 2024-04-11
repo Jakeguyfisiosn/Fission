@@ -1,4 +1,4 @@
-l<html>
+<html>
     <head>
 <style>
 button {
@@ -421,8 +421,8 @@ class ore {
         
         this.name = name
         this.value = value
-        this.cost = value * 100
-        this.cost1 = value * 5
+        this.cost = value * 200
+        this.cost1 = value * 10
         this.time = time
 
         const n = this.name
@@ -486,7 +486,7 @@ class ore {
             var n = this.name
             const {original_value} = EA.spurts.items[n]
             if (EA.spurts.items.money - (original_value * 100) >= 0 && document.getElementById(n+'_set').classList.contains("unlocked")) {
-                EA.spurts.items[n].auto = true;
+                EA.spurts.items[n].auto = false;
                 EA.spurts.items.money -= original_value * 100;
                 update_game()
             }
