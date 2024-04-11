@@ -280,8 +280,8 @@ body {
                     <select id="upgrade_amount">
                         <option value=1>1</option>
                         <option value=10>10</option>
+                        <option value=25>25</option>
                         <option value=50>50</option>
-                        <option value=100>100</option>
                     </select>
                 </div>
                 <button class="menu_options_button" id="manager" onclick="toggle_manager()">Managers</button>
@@ -314,7 +314,7 @@ body {
 function num2txt(num) {
 
     //suffixes
-    const suffixes = [" thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"," dectillion"," unD"," dD"," trD"," qdD"," qnD"," sxD"," spD", " octD"," nvD"," Vg"," unVg"," dVg"," trVg"," qdVg"," qnVg"," sxVg"," spVg"," ocVg"," nonVg"," Tg"," unTg"," dTg"," tsTg"," qdTg"," qnTg"," sxTG"," spTg"," ocTg"," noTg"," Qdr"," unQdr"," dQdr"," trQdr"," qdQdr"," qnQdr"," sxQdr"," spQdr"," octQdr"," nonQdr"," qQGnt"," uQGnt"," dQGnt"," tQGnt"," qdQGnt"," QnQGnt"," sxQGnt"," SpQGnt"," OQqGnt"," NvQqGnt"," SXGntl"," USXGntl"," DSXGntl"," TSXGntl"," qtSXGntl"," QnSXGntl"," sxSXGntl"," spSXGntl"," oSXGntl"," NVSXGntl"," SPTGNL"," USPTGNL"," dSPTGNL"," tSPTGNL"," qtSPTGNL"," qnSPTGNL"," svSPTGNL"," spSPTGNL"," oSPTGNL","NVSPTGNL"," OTGNTL"," UOTGNTL"," dOTGNTL"," tOTGNTL"," qtOTGNTL"," qnOTGNTL"," svOTGNTL"," spOTGNTL"," otOTGNTL"," nvOTGNTL"," NONGNTL"," uNONGNTL"," dNONGNTL"," tNONGNTL"," qtNONGNTL"," qnNONGNTL"," svNONGNTL"," spNONGNTL"," octNONGNTL"," nvNONGNTL"," CENT"," UNCENT"," DuCENT"]
+    const suffixes = [" thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"," dectillion"," unD"," dD"," trD"," qdD"," qnD"," sxD"," spD", " octD"," nvD"," Vg"," unVg"," dVg"," trVg"," qdVg"," qnVg"," sxVg"," spVg"," ocVg"," nonVg"," Tg"," unTg"," dTg"," tsTg"," qdTg"," qnTg"," sxTG"," spTg"," ocTg"," noTg"," Qdr"," unQdr"," dQdr"," trQdr"," qdQdr"," qnQdr"," sxQdr"," spQdr"," octQdr"," nonQdr"," qQGnt"," uQGnt"," dQGnt"," tQGnt"," qdQGnt"," QnQGnt"," sxQGnt"," SpQGnt"," OQqGnt"," NvQqGnt"," SXGntl"," USXGntl"," DSXGntl"," TSXGntl"," qtSXGntl"," QnSXGntl"," sxSXGntl"," spSXGntl"," oSXGntl"," NVSXGntl"," SPTGNL"," USPTGNL"," dSPTGNL"," tSPTGNL"," qtSPTGNL"," qnSPTGNL"," svSPTGNL"," spSPTGNL"," oSPTGNL","NVSPTGNL"," OTGNTL"," UOTGNTL"," dOTGNTL"," tOTGNTL"," qtOTGNTL"," qnOTGNTL"," svOTGNTL"," spOTGNTL"," otOTGNTL"," nvOTGNTL"," NONGNTL"," uNONGNTL"," dNONGNTL"," tNONGNTL"," qtNONGNTL"," qnNONGNTL"," svNONGNTL"," spNONGNTL"," octNONGNTL"," nvNONGNTL"," CENT"," UNCENT"," DuCENT", "A lot", "Jolt was here"]
 
     //variables
     let n = String(num)
@@ -328,6 +328,7 @@ function num2txt(num) {
     dumbNumber = 1000000000000000000000
 
     //i dont know how this works
+    //neither do i
     if (num >= dumbNumber) {
         Something = parseInt(n.split("+")[1])-2
         digetsorSMTH = n.split("e")[0]
@@ -752,19 +753,19 @@ const centery = decade * 10
 var EA  = new game()
 
 function main() {
-    dirt = new ore("dirt",1,second)
-    stone = new ore("stone",10,second * 2)
-    copper = new ore("copper",100,second * 5)
-    iron = new ore("iron",1000,second * 10)
-    silver = new ore("silver",5500,second*20)
-    steel = new ore("steel",10000,second * 30)
-    bronze = new ore("bronze",100000,minute)
-    gold = new ore("gold",1000000,minute*2.5)
-    topaz = new ore("topaz",10000000,minute*5)
-    amethyst = new ore("amethyst",100000000,minute*15)
-    ruby = new ore("ruby",1000000000,hour)
-    sapphire = new ore("sapphire",10000000000,hour*5)
-    emerald = new ore("emerald",100000000000, day)
+    dirt = new ore("dirt",1000,second)
+    stone = new ore("stone",5000,second * 5)
+    copper = new ore("copper",10000,second*10)
+    iron = new ore("iron",20000,second * 20)
+    silver = new ore("silver",30000,second*30)
+    steel = new ore("steel",40000,second*40)
+    bronze = new ore("bronze",50000,second*50)
+    gold = new ore("gold",60000,minute)
+    topaz = new ore("topaz",90000,minute*1.5)
+    amethyst = new ore("amethyst",120000,minute*2)
+    ruby = new ore("ruby",150000,minute*2.5)
+    sapphire = new ore("sapphire",150000,minute*5)
+    emerald = new ore("emerald",300000, minute*10)
     pyrite = new ore("pyrite",1000000000000, day * 3)
     zircon = new ore("zircon",10000000000000, week)
     kyanite = new ore("kyanite",100000000000000,week*5)
