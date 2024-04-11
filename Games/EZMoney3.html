@@ -1,4 +1,4 @@
-<html>
+l<html>
     <head>
 <style>
 button {
@@ -753,34 +753,33 @@ const centery = decade * 10
 var EA  = new game()
 
 function main() {
-    dirt = new ore("dirt",1000,second)
-    stone = new ore("stone",5000,second * 5)
-    copper = new ore("copper",10000,second*10)
-    iron = new ore("iron",20000,second * 20)
-    silver = new ore("silver",30000,second*30)
-    steel = new ore("steel",40000,second*40)
+    dirt = new ore("dirt",1,second)
+    stone = new ore("stone",10,second * 5)
+    copper = new ore("copper",100,second*10)
+    iron = new ore("iron",1000,second * 20)
+    silver = new ore("silver",5000,second*30)
+    steel = new ore("steel",10000,second*40)
     bronze = new ore("bronze",50000,second*50)
-    gold = new ore("gold",60000,minute)
-    topaz = new ore("topaz",90000,minute*1.5)
-    amethyst = new ore("amethyst",120000,minute*2)
-    ruby = new ore("ruby",150000,minute*2.5)
-    sapphire = new ore("sapphire",150000,minute*5)
-    emerald = new ore("emerald",300000, minute*10)
-    pyrite = new ore("pyrite",1000000000000, day * 3)
-    zircon = new ore("zircon",10000000000000, week)
-    kyanite = new ore("kyanite",100000000000000,week*5)
-    garnet = new ore("garnet",1000000000000000, month * 2)
-    jade = new ore("jade",10000000000000000, month * 6)
-    beryl = new ore("beryl",100000000000000000, year)
-    citrine = new ore("citrine",1000000000000000000,year*2)
-    fluorite = new ore("fluorite",10000000000000000000,decade)
-    hyacinth = new ore("hyacinth",100000000000000000000,decade*2)
-    lolite = new ore("lolite",1000000000000000000000,decade*3)
-    labradorite = new ore("labradorite",10000000000000000000000, decade * 4)
-    malachite = new ore("malachite",100000000000000000000000, decade * 5)
-    quartz = new ore("quartz",1000000000000000000000000, decade *6)
-    obsidian  = new ore("obsidian",10000000000000000000000000, centery)
-    
+    gold = new ore("gold",1000000,minute)
+    topaz = new ore("topaz",500000,minute*1.5)
+    amethyst = new ore("amethyst",1000000,minute*2)
+    ruby = new ore("ruby",5000000,minute*2.5)
+    sapphire = new ore("sapphire",10000000,minute*5)
+    emerald = new ore("emerald",50000000, minute*10)
+    pyrite = new ore("pyrite",100000000, minute * 15)
+    zircon = new ore("zircon",500000000, minute*30)
+    kyanite = new ore("kyanite",1000000000,minute*45)
+    garnet = new ore("garnet",10000000000, hour)
+    jade = new ore("jade",100000000000, hour * 2)
+    beryl = new ore("beryl",1000000000000, hour*3)
+    citrine = new ore("citrine",10000000000000,hour*4)
+    fluorite = new ore("fluorite",100000000000000,hour*5)
+    hyacinth = new ore("hyacinth",1000000000000000,hour*6)
+    lolite = new ore("lolite",100000000000000000,hour*7)
+    labradorite = new ore("labradorite",1000000000000000000, hour * 8)
+    malachite = new ore("malachite",10000000000000000000, hour * 9)
+    quartz = new ore("quartz",100000000000000000000, hour *10)
+    obsidian  = new ore("obsidian",1000000000000000000000, day)
     dropDown()
 
     
@@ -807,7 +806,7 @@ document.addEventListener('keydown',e => {
 
         if (e.key.toLowerCase() == "r" && e.shiftKey && e.metaKey) {
             e.preventDefault()
-            alert("progress reset","Lol get rekt you idiot, some person reset your progress so deal with it and dont cry! Also this resets all the progress from all the easy moneys loloololololollo")
+            alert("progress reset","Lol get rekt you idiot, some person reset your progress so deal with it and dont cry! Also a ballastic missle is heading to your house rn get pwned!")
             localStorage.clear()
         }
 
@@ -935,7 +934,7 @@ function loadGame() {
         document.getElementById("menus").style.visibility = "visible"
         document.getElementById("stats").style.visibility = "visible"
 
-        start_screen = false
+        start_screen = true
 
         load()
 
