@@ -486,7 +486,7 @@ class ore {
             var n = this.name
             const {original_value} = EA.spurts.items[n]
             if (EA.spurts.items.money - (original_value * 100) >= 0 && document.getElementById(n+'_set').classList.contains("unlocked")) {
-                EA.spurts.items[n].auto = false;
+                EA.spurts.items[n].auto = true;
                 EA.spurts.items.money -= original_value * 100;
                 update_game()
             }
@@ -534,12 +534,7 @@ class ore {
             }
         }
 
-        /* Auto click */ var clicker = setInterval(function() {
-            try {
-                if (EA.spurts.items[e.name].auto) {
-                    e.click()
-                }
-            }
+//jake-is-dumb
             catch(err) {
                 clearInterval(clicker)
                 Error(err)
@@ -666,7 +661,7 @@ function update_game() {
         }
 
         const change = EA.spurts.items[n].time_change
-        if (EA.spurts.items[n].time_taken - change > 0) {}
+        if (EA.spurts.items[n].time_taken - change > 0.00000000000000000000000000000000000000000000000000001) {}
         else {
             if (EA.spurts.items[n].auto) {
                 document.getElementById(n+"_progress").style.backgroundColor = "gray"
