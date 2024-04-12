@@ -698,12 +698,14 @@ var EA  = new game()
 function main() {
     dirt = new ore("dirt",1,second)
     stone = new ore("stone",10,second * 5)
+    stoneq = new ore("stone quarry",50,second*7)
     copper = new ore("copper",100,second*10)
     iron = new ore("iron",1000,second * 20)
     silver = new ore("silver",5000,second*30)
     steel = new ore("steel",10000,second*40)
     bronze = new ore("bronze",50000,second*50)
     gold = new ore("gold",1000000,minute)
+    goldf = new ore("gold factory", 5000000,minute)
     topaz = new ore("topaz",500000,minute*1.5)
     amethyst = new ore("amethyst",1000000,minute*2)
     ruby = new ore("ruby",5000000,minute*2.5)
@@ -723,7 +725,7 @@ function main() {
     malachite = new ore("malachite",10000000000000000000, hour * 9)
     quartz = new ore("quartz",100000000000000000000, hour *10)
     obsidian  = new ore("obsidian",1000000000000000000000, day)
-    Test  = new ore("Test",1000000000000000000000, day)
+    diamond  = new ore("diamond",10000000000000000000000, day)
     dropDown()
 
 
