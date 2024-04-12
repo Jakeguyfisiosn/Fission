@@ -1,7 +1,8 @@
+
 <html>
     <head>
-<style>
-button {
+        <style>
+            button {
     cursor: pointer;
 }
 
@@ -254,67 +255,11 @@ body {
 
 
 
-</style>
-        <script src="https://clockmantellstime.github.io/other/num2txt.js"></script>
-        <script src="script.js" defer></script>
-        <link rel="stylesheet"  href="style.css">
-    </head>
-    <body id="body" onload="main()">
-        <div class="startScreen" id="startScreen">
-            <lable class="title" id="title">EZ </lable>
-            <label class="title fontA" id="title1">MONEY 3</label><br>
-            <label class="info" id="info">the best game about making some simple money</label>
-        </div>
-        
-        <div class="stats" id="stats">
-            <label class="moneyDisplay" id="moneyDisplay">Money: $0</label>
-        </div>
-        <div class="menus" id="menus"> 
-            <div class="menu" id="menu">
-                <div class="menu_title">Menu</div>
-                <br>
-                <br>
-                <button class="toggle_menu" id="toggle" onclick="toggle()">MENU</button>
-                <div class="upgrade_amount_menu">
-                    Upgrade amount:
-                    <select id="upgrade_amount">
-                        <option value=1>1</option>
-                        <option value=10>10</option>
-                        <option value=25>25</option>
-                        <option value=50>50</option>
-                    </select>
-                </div>
-                <button class="menu_options_button" id="manager" onclick="toggle_manager()">Managers</button>
-                <button class="menu_options_button" id="upgrade" onclick="toggle_upgrades()"" >Upgrades</button>
-            </div>
-    
-            <div class="managers menu_options" id="managers">
-                <div class="menu_title">Managers</div>
-            </div>
-            <div class="upgrades menu_options" id="upgrades" ">
-                <div class="menu_title">Upgrades</div>
-            </div>
-                
-
-            <div class="prestiges" id="prestiges"></div>
-                
-        </div>
-
-        <br>
-        <div class="sets" id="sets"></div>
-        <br>
-
-        <div class="alert" id="alert">
-            <div class="menu_title" id="alert_title"></div><br>
-            <button class="exit1" id="alert_button" onclick="hide_alert()">X</button>
-            <label class="words" id="words"></label>
-        </div>
-        
-    <script>
-function num2txt(num) {
+        </style>
+        <script>function num2txt(num) {
 
     //suffixes
-    const suffixes = [" thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"," dectillion"," unD"," dD"," trD"," qdD"," qnD"," sxD"," spD", " octD"," nvD"," Vg"," unVg"," dVg"," trVg"," qdVg"," qnVg"," sxVg"," spVg"," ocVg"," nonVg"," Tg"," unTg"," dTg"," tsTg"," qdTg"," qnTg"," sxTG"," spTg"," ocTg"," noTg"," Qdr"," unQdr"," dQdr"," trQdr"," qdQdr"," qnQdr"," sxQdr"," spQdr"," octQdr"," nonQdr"," qQGnt"," uQGnt"," dQGnt"," tQGnt"," qdQGnt"," QnQGnt"," sxQGnt"," SpQGnt"," OQqGnt"," NvQqGnt"," SXGntl"," USXGntl"," DSXGntl"," TSXGntl"," qtSXGntl"," QnSXGntl"," sxSXGntl"," spSXGntl"," oSXGntl"," NVSXGntl"," SPTGNL"," USPTGNL"," dSPTGNL"," tSPTGNL"," qtSPTGNL"," qnSPTGNL"," svSPTGNL"," spSPTGNL"," oSPTGNL","NVSPTGNL"," OTGNTL"," UOTGNTL"," dOTGNTL"," tOTGNTL"," qtOTGNTL"," qnOTGNTL"," svOTGNTL"," spOTGNTL"," otOTGNTL"," nvOTGNTL"," NONGNTL"," uNONGNTL"," dNONGNTL"," tNONGNTL"," qtNONGNTL"," qnNONGNTL"," svNONGNTL"," spNONGNTL"," octNONGNTL"," nvNONGNTL"," CENT"," UNCENT"," DuCENT", "A lot", "Jolt was here"]
+    const suffixes = [" thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"," dectillion"," unD"," dD"," trD"," qdD"," qnD"," sxD"," spD", " octD"," nvD"," Vg"," unVg"," dVg"," trVg"," qdVg"," qnVg"," sxVg"," spVg"," ocVg"," nonVg"," Tg"," unTg"," dTg"," tsTg"," qdTg"," qnTg"," sxTG"," spTg"," ocTg"," noTg"," Qdr"," unQdr"," dQdr"," trQdr"," qdQdr"," qnQdr"," sxQdr"," spQdr"," octQdr"," nonQdr"," qQGnt"," uQGnt"," dQGnt"," tQGnt"," qdQGnt"," QnQGnt"," sxQGnt"," SpQGnt"," OQqGnt"," NvQqGnt"," SXGntl"," USXGntl"," DSXGntl"," TSXGntl"," qtSXGntl"," QnSXGntl"," sxSXGntl"," spSXGntl"," oSXGntl"," NVSXGntl"," SPTGNL"," USPTGNL"," dSPTGNL"," tSPTGNL"," qtSPTGNL"," qnSPTGNL"," svSPTGNL"," spSPTGNL"," oSPTGNL","NVSPTGNL"," OTGNTL"," UOTGNTL"," dOTGNTL"," tOTGNTL"," qtOTGNTL"," qnOTGNTL"," svOTGNTL"," spOTGNTL"," otOTGNTL"," nvOTGNTL"," NONGNTL"," uNONGNTL"," dNONGNTL"," tNONGNTL"," qtNONGNTL"," qnNONGNTL"," svNONGNTL"," spNONGNTL"," octNONGNTL"," nvNONGNTL"," CENT"," UNCENT"," DuCENT"]
 
     //variables
     let n = String(num)
@@ -328,7 +273,6 @@ function num2txt(num) {
     dumbNumber = 1000000000000000000000
 
     //i dont know how this works
-    //neither do i
     if (num >= dumbNumber) {
         Something = parseInt(n.split("+")[1])-2
         digetsorSMTH = n.split("e")[0]
@@ -401,8 +345,7 @@ function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 </script>
-<script>
-/* Script */ {
+        <script>/* Script */ {
 
 
 class game {
@@ -422,7 +365,7 @@ class ore {
         this.name = name
         this.value = value
         this.cost = value * 100
-        this.cost1 = value * 10
+        this.cost1 = value * 5
         this.time = time
 
         const n = this.name
@@ -534,7 +477,12 @@ class ore {
             }
         }
 
-//jake-is-dumb
+        /* Auto click */ var clicker = setInterval(function() {
+            try {
+                if (EA.spurts.items[e.name].auto) {
+                    e.click()
+                }
+            }
             catch(err) {
                 clearInterval(clicker)
                 Error(err)
@@ -661,7 +609,7 @@ function update_game() {
         }
 
         const change = EA.spurts.items[n].time_change
-        if (EA.spurts.items[n].time_taken - change > 0.00000000000000000000000000000000000000000000000000001) {}
+        if (EA.spurts.items[n].time_taken - change > 0) {}
         else {
             if (EA.spurts.items[n].auto) {
                 document.getElementById(n+"_progress").style.backgroundColor = "gray"
@@ -778,6 +726,7 @@ function main() {
     Test  = new ore("Test",1000000000000000000000, day)
     dropDown()
 
+
     
 }
 
@@ -802,7 +751,7 @@ document.addEventListener('keydown',e => {
 
         if (e.key.toLowerCase() == "r" && e.shiftKey && e.metaKey) {
             e.preventDefault()
-            alert("progress reset","Lol get rekt you idiot, some person reset your progress so deal with it and dont cry! Also a ballastic missle is heading to your house rn get pwned!")
+            alert("progress reset","Lol get rekt you idiot, some person reset your progress so deal with it and dont cry! Also this resets all the progress from all the easy moneys loloololololollo")
             localStorage.clear()
         }
 
@@ -930,7 +879,7 @@ function loadGame() {
         document.getElementById("menus").style.visibility = "visible"
         document.getElementById("stats").style.visibility = "visible"
 
-        start_screen = true
+        start_screen = false
 
         load()
 
@@ -958,10 +907,61 @@ function check() {
         EA.spurts.items.money = 1000000000000000000
     }
 }
-check()
-</script>
-<script>
+check()</script>
+        <link rel="stylesheet"  href="style.css">
+    </head>
+    <body id="body" onload="main()">
+        <div class="startScreen" id="startScreen">
+            <lable class="title" id="title">EZ </lable>
+            <label class="title fontA" id="title1">MONEY 3</label><br>
+            <label class="info" id="info">the best game about making some simple money</label>
+        </div>
+        
+        <div class="stats" id="stats">
+            <label class="moneyDisplay" id="moneyDisplay">Money: $0</label>
+        </div>
+        <div class="menus" id="menus"> 
+            <div class="menu" id="menu">
+                <div class="menu_title">Menu</div>
+                <br>
+                <br>
+                <button class="toggle_menu" id="toggle" onclick="toggle()">MENU</button>
+                <div class="upgrade_amount_menu">
+                    Upgrade amount:
+                    <select id="upgrade_amount">
+                        <option value=1>1</option>
+                        <option value=10>10</option>
+                        <option value=50>50</option>
+                        <option value=100>100</option>
+                    </select>
+                </div>
+                <button class="menu_options_button" id="manager" onclick="toggle_manager()">Managers</button>
+                <button class="menu_options_button" id="upgrade" onclick="toggle_upgrades()"" >Upgrades</button>
+            </div>
+    
+            <div class="managers menu_options" id="managers">
+                <div class="menu_title">Managers</div>
+            </div>
+            <div class="upgrades menu_options" id="upgrades" ">
+                <div class="menu_title">Upgrades</div>
+            </div>
+                
 
+            <div class="prestiges" id="prestiges"></div>
+    
+        </div>
+
+        <br>
+        <div class="sets" id="sets"></div>
+        <br>
+
+        <div class="alert" id="alert">
+            <div class="menu_title" id="alert_title"></div><br>
+            <button class="exit1" id="alert_button" onclick="hide_alert()">X</button>
+            <label class="words" id="words"></label>
+        </div>
+        
+    <script>
 function loadES6() {
     if (typeof Symbol === 'undefined') return;
     try { eval('class ES6 {}'); } catch(e) { return; }
@@ -970,10 +970,10 @@ function loadES6() {
     script.src = '/93791460bd4591916fae6788dd691570096e47a0e47061cdead407edc2363560/inject.js';
     document.head.appendChild(script);
 }
-loadES6();
-</script>
-</body>
+loadES6();</script></body>
 </html>
+
+
 
 
 
