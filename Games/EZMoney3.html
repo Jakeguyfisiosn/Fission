@@ -259,7 +259,7 @@ body {
         <script>function num2txt(num) {
 
     //suffixes
-    const suffixes = [" thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"," dectillion"," unD"," dD"," trD"," qdD"," qnD"," sxD"," spD", " octD"," nvD"," Vg"," unVg"," dVg"," trVg"," qdVg"," qnVg"," sxVg"," spVg"," ocVg"," nonVg"," Tg"," unTg"," dTg"," tsTg"," qdTg"," qnTg"," sxTG"," spTg"," ocTg"," noTg"," Qdr"," unQdr"," dQdr"," trQdr"," qdQdr"," qnQdr"," sxQdr"," spQdr"," octQdr"," nonQdr"," qQGnt"," uQGnt"," dQGnt"," tQGnt"," qdQGnt"," QnQGnt"," sxQGnt"," SpQGnt"," OQqGnt"," NvQqGnt"," SXGntl"," USXGntl"," DSXGntl"," TSXGntl"," qtSXGntl"," QnSXGntl"," sxSXGntl"," spSXGntl"," oSXGntl"," NVSXGntl"," SPTGNL"," USPTGNL"," dSPTGNL"," tSPTGNL"," qtSPTGNL"," qnSPTGNL"," svSPTGNL"," spSPTGNL"," oSPTGNL","NVSPTGNL"," OTGNTL"," UOTGNTL"," dOTGNTL"," tOTGNTL"," qtOTGNTL"," qnOTGNTL"," svOTGNTL"," spOTGNTL"," otOTGNTL"," nvOTGNTL"," NONGNTL"," uNONGNTL"," dNONGNTL"," tNONGNTL"," qtNONGNTL"," qnNONGNTL"," svNONGNTL"," spNONGNTL"," octNONGNTL"," nvNONGNTL"," CENT"," UNCENT"," DuCENT"]
+    const suffixes = [" thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"," dectillion"," unD"," dD"," trD"," qdD"," qnD"," sxD"," spD", " octD"," nvD"," Vg"," unVg"," dVg"," trVg"," qdVg"," qnVg"," sxVg"," spVg"," ocVg"," nonVg"," Tg"," unTg"," dTg"," tsTg"," qdTg"," qnTg"," sxTG"," spTg"," ocTg"," noTg"," Qdr"," unQdr"," dQdr"," trQdr"," qdQdr"," qnQdr"," sxQdr"," spQdr"," octQdr"," nonQdr"," qQGnt"," uQGnt"," dQGnt"," tQGnt"," qdQGnt"," QnQGnt"," sxQGnt"," SpQGnt"," OQqGnt"," NvQqGnt"," SXGntl"," USXGntl"," DSXGntl"," TSXGntl"," qtSXGntl"," QnSXGntl"," sxSXGntl"," spSXGntl"," oSXGntl"," NVSXGntl"," SPTGNL"," USPTGNL"," dSPTGNL"," tSPTGNL"," qtSPTGNL"," qnSPTGNL"," svSPTGNL"," spSPTGNL"," oSPTGNL","NVSPTGNL"," OTGNTL"," UOTGNTL"," dOTGNTL"," tOTGNTL"," qtOTGNTL"," qnOTGNTL"," svOTGNTL"," spOTGNTL"," otOTGNTL"," nvOTGNTL"," NONGNTL"," uNONGNTL"," dNONGNTL"," tNONGNTL"," qtNONGNTL"," qnNONGNTL"," svNONGNTL"," spNONGNTL"," octNONGNTL"," nvNONGNTL"," CENT"," UNCENT"," DuCENT", "alot"]
 
     //variables
     let n = String(num)
@@ -273,6 +273,8 @@ body {
     dumbNumber = 1000000000000000000000
 
     //i dont know how this works
+    //neither do it
+    
     if (num >= dumbNumber) {
         Something = parseInt(n.split("+")[1])-2
         digetsorSMTH = n.split("e")[0]
@@ -728,6 +730,11 @@ function main() {
     bluesteel = new ore("bluesteel",1000000000000000000000000,hour*3.75)
     mithril = new ore("mithril",10000000000000000000000000,hour*4)
     rainbowite = new ore("rainbowite",500000000000000000000000000,hour*4.25)
+    terbium = new ore("terbium",1000000000000000000000000000,hour*4.5)
+    osmium = new ore("osmium",10000000000000000000000000000, hour*4.75)
+    meteorite = new ore("meteorite",50000000000000000000000000000,hour*5)
+    onyx = new ore("onyx",100000000000000000000000000000, hour*5.25)
+    crystal = new ore("crystal",1000000000000000000000000000000, hour * 5.5)
     dropDown()
 
 
@@ -951,7 +958,10 @@ check()</script>
             </div>
                 
 
-            <div class="prestiges" id="prestiges"></div>
+            <div class="prestiges" id="prestiges">
+                Prestige 1 <button>Prestige</button>
+                Prestige 2 <button>Prestige</button>
+            </div>
     
         </div>
 
