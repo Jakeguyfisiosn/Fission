@@ -11,5 +11,4 @@ goto e
 :: ok rename this file to #.bat, replace the # with a name
 :: example kill.bat
 :: then run it
-:: you dont have to delete these, these are comments
 :: jake is still dumb btw
