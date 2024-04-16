@@ -558,7 +558,7 @@ function getIncident(plane) {
     var wear = data.planes[plane].wear
     if (wear >= 100) {
         //plane blew up and got destoryed and you lose all your money from law suits
-        window.alert("Your plane blew up mid flight...your airlines funds got comprimised...")
+        window.alert("Your plane blew up mid flight you got sued so your airlines funds got comprimised...")
         sellPlane(plane,false)
         return data.money + 100000
     }
@@ -587,11 +587,17 @@ function getIncident(plane) {
         window.alert("The toilet broke.")
         return 500
     }
+  
     else if (wear >= 40) {
         //The fridge broke so no food or drnks - 200
         window.alert("The fridge broje so passengers could not have food or drinks.")
         return 200
     }
+   else if (wear >= 30) {
+       //somebody stole one of your seats - 50
+       window.alert("Somebody stole one of your seats")
+       return 50
+   }
     else {
         return 0
     }
